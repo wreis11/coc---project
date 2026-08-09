@@ -236,7 +236,8 @@ h1 {
 .social-links img {
   width: 1.05rem;
   height: 1.05rem;
-  filter: brightness(0) invert(1);
+  display: block;
+  object-fit: contain;
 }
 
 .contact {
