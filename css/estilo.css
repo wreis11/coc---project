@@ -1,215 +1,141 @@
-body {
-  background-color: white;
-  margin: 0;
-  padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  max-width: 100%;
+/* Variáveis globais e paleta visual compartilhada pelas páginas internas */
+:root {
+  color-scheme: dark;
+  --primary: #f2cb05;
+  --primary-strong: #d9b100;
+  --surface: rgba(7, 17, 31, 0.86);
+  --surface-soft: rgba(255, 255, 255, 0.08);
+  --text: #f8f9fb;
+  --muted: rgba(248, 249, 251, 0.8);
+  --border: rgba(255, 255, 255, 0.16);
 }
 
-/*barra de titulo*/
-.barra {
-  background-color: rgba(242, 203, 5, 0.815);
-  max-width: 100%;
-  height: 5em;
-  position: relative;
-  bottom: 25px;
+/* Reset e base geral */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #07111f 0%, #0f1f35 100%);
+  color: var(--text);
+  min-height: 100vh;
 }
 
 a {
   text-decoration: none;
-}
-.saber {
-  color: white;
-  bottom: 20px;
-  position: relative;
-  padding-left: 67em;
-  font-weight: bold;
-  font-size: 18px;
+  color: inherit;
 }
 
-.saber:hover {
-  color: #f2cb05;
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.barra {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background: rgba(7, 17, 31, 0.86);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
 }
 
 .co {
-  color: white;
-  text-align: center;
-  position: relative;
-  top: 25px;
+  margin: 0;
+  color: var(--text);
+  font-size: clamp(1.05rem, 2vw, 1.3rem);
+  letter-spacing: 0.16em;
 }
 
 .ajuda {
-  width: 35px;
-  position: relative;
-  left: 80em;
-  bottom: 34px;
+  width: 1.8rem;
+  height: 1.8rem;
+  filter: brightness(0) invert(1);
 }
 
-/*Pequena descricao do site*/
-.des {
-  /*background-color: blue;*/
-  width: 39em;
-  height: 10em;
-  margin-top: 142px;
-  margin-left: 27px;
-}
-.seja {
-  color: #f2cb05;
-  position: relative;
-  bottom: 1em;
-  font-size: 4em;
-  text-align: left;
+/* Espaçamento principal do conteúdo */
+main {
+  padding: 2rem 1rem 3rem;
 }
 
-.descri {
-  color: white;
-  font-weight: bold;
-  text-indent: 10px;
-  font-size: large;
-  position: relative;
-  bottom: 5em;
-}
-
-/*inscricoes*/
-
-.ins {
-  /*background-color: blueviolet;*/
-  position: relative;
-  left: 62em;
-  width: 100px;
-}
-
-.cadrastar {
-  color: white;
-  background-color: #f2cb05;
-  border-radius: 35px;
-  font-weight: bolder;
-  border: none;
-  text-align: center;
-  position: relative;
-  bottom: 12em;
-  width: 12em;
-  height: 5em;
-}
-.cadrastar:hover {
-  box-shadow: -1px 1px 35px white;
-}
-.cursos {
-  color: white;
-  background-color: #f2cb05;
-  font-weight: bolder;
-  border: none;
-  text-align: center;
-  position: relative;
-  bottom: 17em;
-  left: 13em;
-  width: 12em;
-  height: 5em;
-  border-radius: 35px;
-}
-.cursos:hover {
-  box-shadow: -1px 1px 35px white;
-}
-.inscrever {
-  color: white;
-  background-color: #f2cb05;
-  font-weight: bolder;
-  border: none;
-  text-align: center;
-  position: relative;
-  bottom: 16em;
-  width: 25em;
-  height: 5em;
-  border-radius: 35px;
-}
-.inscrever:hover {
-  box-shadow: -1px 1px 35px white;
-}
-/*links*/
-
-.link {
-  /*background-color: aqua;*/
-  position: relative;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-img {
-  overflow: hidden;
-  width: 35px;
-}
-
-.gmail {
-  overflow: hidden;
-  position: relative;
-  left: 7em;
-}
-.instagram {
-  overflow: hidden;
-  position: relative;
-  left: 25em;
-  width: 49;
-}
-
-.whatsapp {
-  overflow: hidden;
-  position: relative;
-  left: 43em;
-}
-
-.facebook {
-  position: relative;
-  left: 61em;
-  overflow: hidden;
-}
-
-.contato {
-  padding-left: 76em;
-  position: relative;
-  color: white;
-  bottom: 4em;
-  overflow: hidden;
-}
-
-.tele {
-  overflow: hidden;
-  padding-left: 73em;
-  position: relative;
-  bottom: 6em;
-}
-
-/*Banner*/
-
-.banner {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
+/* Centralização do formulário */
+form {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.banner video {
-  position: fixed;
-  top: 0;
-  left: 0;
-  object-fit: cover;
-  width: 100%;
+  padding: 1rem 0 2rem;
 }
 
-/*fonte de descricao*/
+.bai {
+  width: min(100%, 34rem);
+  padding: 2rem;
+  border-radius: 1.4rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.28);
+}
 
-.p {
-  font-family:
-    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+.bai h1 {
+  margin: 0 0 1rem;
   text-align: center;
+  color: var(--text);
 }
 
-.bv {
-  /*background-color: aqua;*/
-  width: 72em;
-  margin-left: 6em;
+label,
+.wesley,
+.aroz {
+  display: block;
+  color: var(--muted);
+  margin-bottom: 0.5rem;
 }
 
-/*Fotos de cursos*/
+/* Estilo base dos campos de input */
+input {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.9rem 1rem;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text);
+  margin: 0.3rem 0 1rem;
+}
+
+input:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Botão principal do formulário */
+.oi {
+  border: none;
+  background: var(--primary);
+  color: #07111f;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.oi:hover,
+.oi:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(242, 203, 5, 0.22);
+}
+
+.oi:active {
+  transform: translateY(0);
+}
+
+/* Ajustes para ecrãs pequenos */
+@media (max-width: 640px) {
+  .barra {
+    padding: 1rem;
+  }
+
+  .bai {
+    padding: 1.3rem;
+  }
+}

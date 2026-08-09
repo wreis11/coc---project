@@ -1,69 +1,51 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-pt">
+  <!-- Página de inscrição do site -->
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="inscrever.css" />
-    <link rel="stylesheet" href="estilo.css" />
+    <title>Inscrever-se | College of Computing</title>
+    <link rel="stylesheet" href="../css/estilo.css" />
+    <link rel="stylesheet" href="../css/inscrever.css" />
   </head>
 
   <body>
-    <div class="barra">
-      <a href="coc.html">
+    <!-- Cabeçalho comum a todas as páginas internas -->
+    <header class="barra">
+      <a href="../index.html">
         <h1 class="co">COLLEGE OF COMPUTING</h1>
       </a>
-      <a href="saber.html">
-        <albr title="saber mais"
-          ><img src="iconis/info.png" alt="" class="ajuda"
-        /></albr>
+      <a href="saber.html" aria-label="Mais informações">
+        <img src="../imgs/iconis/info.png" alt="" class="ajuda" />
       </a>
-    </div>
+    </header>
 
-    <form>
-      <div class="bai">
-        <h1>Conecta-se</h1>
-        <br />
-        <br />
-        <label class="wesley">Nome:</label>
-        <br />
-        <input type="text" required placeholder="Nome" />
-        <br />
-        <br />
-        <label class="wesley">Apelido:</label>
-        <br />
-        <input type="text" required placeholder="Apelido" />
-        <br />
-        <br />
-        <label class="wesley">Data de nascimento</label>
-        <br />
-        <input type="date" required placeholder="Data de nascimento" />
-        <br />
-        <br />
-        <label class="wesley">E-mail ou número de telefone:</label>
-        <br />
-        <input type="text" required placeholder="E-mail" />
-        <br />
-        <br />
-        <label class="wesley">Palavra-passe:</label>
-        <br />
-        <input type="password" required placeholder="Palavra-passe" />
-        <br />
-        <br />
-        <label class="wesley">Confirmar palavra-passe:</label>
-        <br />
-        <input type="password" required placeholder="Confirmar palavra-passe" />
-        <br />
-        <br />
-        <input type="submit" value="Próximo" class="oi" />
-
-        <label class="aroz"
-          >Já tem uma conta?<a href="login.html" target="_self" rel="next">
-            Login</a
-          ></label
-        >
-      </div>
-    </form>
+    <!-- Conteúdo principal da página -->
+    <main>
+      <!-- Formulário de inscrição -->
+      <form>
+        <div class="bai">
+          <h1>Inscreva-se</h1>
+          <label class="wesley" for="name">Nome:</label>
+          <input id="name" type="text" required placeholder="Nome" />
+          <label class="wesley" for="surname">Apelido:</label>
+          <input id="surname" type="text" required placeholder="Apelido" />
+          <label class="wesley" for="birth">Data de nascimento:</label>
+          <input id="birth" type="date" required />
+          <label class="wesley" for="contact">E-mail ou número de telefone:</label>
+          <input id="contact" type="text" required placeholder="E-mail" />
+          <label class="wesley" for="password">Palavra-passe:</label>
+          <input id="password" type="password" required placeholder="Palavra-passe" />
+          <label class="wesley" for="confirm">Confirmar palavra-passe:</label>
+          <input id="confirm" type="password" required placeholder="Confirmar palavra-passe" />
+          <input type="submit" value="Próximo" class="oi" />
+          <label class="aroz">
+            Já tem uma conta?
+            <a href="login.html" target="_self" rel="next">Login</a>
+          </label>
+        </div>
+      </form>
+    </main>
   </body>
 </html>

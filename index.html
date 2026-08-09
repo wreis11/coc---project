@@ -1,97 +1,96 @@
 <!doctype html>
 <html lang="pt-pt">
-  <!--SITE IMCOMPLETO!!-->
+  <!-- Cabeçalho da página com metadados, título e ligação ao CSS -->
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width, initial-scale=1.0" />
-    <title>College of computing</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="O College of Computing é uma instituição dedicada ao ensino e à aprendizagem na área da computação."
+    />
+    <title>College of Computing</title>
     <link rel="stylesheet" href="css/leyoutpricipal.css" />
-    <style>
-      body {
-        background-color: white;
-        margin: 0;
-        padding: 0;
-        font-family: Arial, Helvetica, sans-serif;
-        max-width: 100%;
-        overflow: hidden;
-      }
-    </style>
   </head>
 
   <body>
-    <!--Banner-->
-    <div class="banner">
-      <video autoplay muted loop>
-        <source src="video/coc.video.mp4" type="video/mp4" />
-      </video>
+    <!-- Estrutura principal da página -->
+    <div class="page-shell">
+      <!-- Hero section com vídeo de fundo, título e ações principais -->
+      <header class="hero">
+        <video
+          class="hero-video"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+          poster="imgs/fotos/college-poster.svg"
+        >
+          <source src="video/coc.video.mp4" type="video/mp4" />
+          O seu navegador não suporta vídeos em background.
+        </video>
+        <div class="hero-overlay"></div>
+
+        <!-- Barra superior com marca e link para saber mais -->
+        <div class="topbar">
+          <a class="brand" href="index.html" aria-label="College of Computing">
+            COLLEGE OF COMPUTING
+          </a>
+          <a class="info-link" href="html/saber.html">Saber mais</a>
+        </div>
+
+        <!-- Conteúdo central da hero section -->
+        <main class="hero-content">
+          <!-- Texto principal e botões de ação -->
+          <section class="intro" aria-labelledby="intro-title">
+            <p class="eyebrow">Instituição de ensino digital</p>
+            <h1 id="intro-title">Aprenda tecnologia com uma base sólida.</h1>
+            <p class="lead">
+              O College of Computing é uma instituição dedicada ao ensino e à
+              aprendizagem na área da computação, da programação e das soluções
+              digitais.
+            </p>
+
+            <div class="actions">
+              <a class="btn btn-primary" href="html/login.html">Login</a>
+              <a class="btn btn-secondary" href="html/cursos.html">Cursos</a>
+              <a class="btn btn-tertiary" href="html/inscreva.html">Inscrever-se</a>
+            </div>
+          </section>
+
+          <!-- Blocos informativos laterais -->
+          <aside class="highlights" aria-label="Resumo do colégio">
+            <article class="card">
+              <h2>Novos caminhos</h2>
+              <p>Descobre cursos que unem teoria, prática e criatividade.</p>
+            </article>
+            <article class="card">
+              <h2>Foco em resultados</h2>
+              <p>Uma formação orientada para as necessidades do mercado atual.</p>
+            </article>
+          </aside>
+        </main>
+
+        <!-- Rodapé com links sociais e contacto -->
+        <footer class="footer">
+          <div class="social-links" aria-label="Redes sociais">
+            <a href="#" aria-label="Facebook">
+              <img src="imgs/iconis/facebook (1).png" alt="" aria-hidden="true" />
+            </a>
+            <a href="#" aria-label="WhatsApp">
+              <img src="imgs/iconis/whatsapp.png" alt="" aria-hidden="true" />
+            </a>
+            <a href="#" aria-label="Instagram">
+              <img src="imgs/iconis/instagram.png" alt="" aria-hidden="true" />
+            </a>
+            <a href="#" aria-label="Gmail">
+              <img src="imgs/iconis/gmail.png" alt="" aria-hidden="true" />
+            </a>
+          </div>
+          <address class="contact">+244 995657687</address>
+        </footer>
+      </header>
     </div>
-    <!--barra de titulo-->
-
-    <div class="barra">
-      <h1 class="co">COLLEGE OF COMPUTING</h1>
-      <a href="html/saber.html">
-        <albr title="saber mais"
-          ><img src="imgs/iconis/info.png" alt="" class="ajuda"
-        /></albr>
-      </a>
-    </div>
-
-    <a href="saber.html"> <label for="--barra" class="saber">Saber mais</label></a>
-
-    <!--Pequena descricao do site-->
-
-    <div class="des">
-      <h1 class="seja">Seja bem-vindo!</h1>
-
-      <p class="descri">
-        O College of Computing (colégio de computação) <br />
-        é uma instituição de ensino, com o foco primordial <br />
-        o ensino e a aprendizagem que os estudantes tenham <br />na área da
-        computação.
-      </p>
-    </div>
-
-    <!--inscricoes-->
-    <div class="ins">
-      <a href="html/login.html"><button class="cadrastar">Login</button></a>
-
-      <a href="html/cursos.html"><button class="cursos">Cursos</button></a>
-
-      <a href="html/inscreva.html"
-        ><button class="inscrever">Se inscrever</button></a
-      >
-    </div>
-
-    <!--Links-->
-    <div class="link">
-      <a href="#"
-        ><img
-          src="imgs/iconis/facebook (1).png"
-          alt="Facebook"
-          class="facebook"
-      /></a>
-
-      <a href="#"
-        ><img src="imgs/iconis/whatsapp.png" alt="WhatsApp" class="whatsapp"
-      /></a>
-
-      <a href="#"
-        ><img src="imgs/iconis/instagram.png" alt="Instagram" class="instagram"
-      /></a>
-
-      <a href="#"
-        ><img src="imgs/iconis/gmail.png" alt="Gmail" class="gmail" />
-      </a>
-    </div>
-
-    <address
-      style="font-family: &quot;Times New Roman&quot;, Times, serif"
-      class="contato"
-    >
-      +244 995657687
-    </address>
-    <img src="imgs/iconis/phone-call.png" alt="" class="tele" />
-    <!--Banner-->
   </body>
 </html>
