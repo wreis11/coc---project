@@ -1,4 +1,9 @@
 /* Ajustes específicos do formulário de inscrição */
+html,
+body {
+  overflow-x: hidden;
+}
+
 .bai {
   display: flex;
   flex-direction: column;

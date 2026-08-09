@@ -1,111 +1,82 @@
 <!doctype html>
 <html lang="pt-pt">
-  <!-- Página de apresentação dos cursos disponíveis -->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <style>
-      body {
-        font-family: Arial, Helvetica, sans-serif;
-        background-color: rgb(211, 204, 204);
-      }
-
-      .barra {
-        background-color: rgba(242, 203, 5, 0.815);
-        max-width: 500px;
-        height: 5em;
-        position: relative;
-        bottom: 25px;
-      }
-
-      a {
-        text-decoration: none;
-      }
-
-      .saber {
-        color: white;
-        bottom: 20px;
-        position: relative;
-        padding-left: 67em;
-        font-weight: bold;
-        font-size: 18px;
-      }
-
-      .saber:hover {
-        color: #f2cb05;
-      }
-
-      .co {
-        color: white;
-        text-align: center;
-        position: relative;
-        top: 25px;
-      }
-
-      .ajuda {
-        width: 35px;
-        position: relative;
-        left: 75em;
-        bottom: 3em;
-      }
-
-      .sala {
-        align-items: center;
-        border-radius: 19px;
-        background-color: white;
-        width: 12em;
-        height: 14em;
-        /*position: relative;
-    left: 2em;
-    top: 5em;*/
-      }
-
-      img {
-        padding-left: 40px;
-        padding-top: 20%;
-      }
-
-      .CS {
-        display: inline-block;
-      }
-
-      p {
-        text-align: center;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: large;
-        font-weight: bold;
-      }
-    </style>
+    <title>Cursos | College of Computing</title>
+    <link rel="stylesheet" href="../css/estilo.css" />
   </head>
 
   <body>
-    <!-- Cabeçalho da página -->
-    <div class="barra">
-      <a href="coc.html">
+    <header class="barra">
+      <a href="../index.html">
         <h1 class="co">COLLEGE OF COMPUTING</h1>
       </a>
-      <a href="saber.html">
-        <albr title="saber mais"
-          ><img src="iconis/info.png" alt="" class="ajuda"
-        /></albr>
+      <a href="saber.html" aria-label="Saber mais">
+        <img src="../imgs/iconis/info.png" alt="Informações" class="ajuda" />
       </a>
-    </div>
+    </header>
 
-    <!-- Secção de cursos -->
-    <h2>Cursos disponíveis</h2>
-    <div class="CS">
-      <div class="sala">
-        <img src="Cursos/designer-de-web.png" alt="" width="110px" />
-        <p>
-          Desenvolvimento <br />
-          web
+    <main class="courses-page">
+      <section class="page-intro">
+        <span class="eyebrow">Área de T.I.</span>
+        <h1>Cursos disponíveis</h1>
+        <p class="lead">
+          Explore cursos organizados para diferentes áreas de tecnologia da informação, desde desenvolvimento até segurança e redes.
         </p>
-      </div>
+      </section>
 
-      <div class="sala">
-        <img src="Cusos/transferir (2).png" alt="" width="110px" />
-      </div>
-    </div>
+      <section class="course-grid">
+        <article class="course-card">
+          <h2>Desenvolvimento Web</h2>
+          <p>Aprenda HTML, CSS, JavaScript e frameworks modernos para criar sites responsivos e aplicações web.</p>
+          <ul>
+            <li>Front-end: HTML, CSS, JavaScript</li>
+            <li>React e interfaces interativas</li>
+            <li>Desenvolvimento responsivo</li>
+          </ul>
+        </article>
+
+        <article class="course-card">
+          <h2>Redes e Infraestrutura</h2>
+          <p>Conheça arquiteturas de redes, protocolos, configuração de routers e switches, e fundamentos de cloud.</p>
+          <ul>
+            <li>TCP/IP, VLANs e roteamento</li>
+            <li>Infraestrutura física e virtual</li>
+            <li>Serviços em nuvem básicos</li>
+          </ul>
+        </article>
+
+        <article class="course-card">
+          <h2>Suporte Técnico</h2>
+          <p>Desenvolva habilidades de manutenção de hardware, software e atendimento ao usuário para suporte em T.I.</p>
+          <ul>
+            <li>Diagnóstico de computadores</li>
+            <li>Instalação de sistemas e aplicativos</li>
+            <li>Atendimento e solução de problemas</li>
+          </ul>
+        </article>
+
+        <article class="course-card">
+          <h2>Segurança da Informação</h2>
+          <p>Estude conceitos de cibersegurança, análise de riscos e proteção de dados em ambientes digitais.</p>
+          <ul>
+            <li>Criptografia e políticas de segurança</li>
+            <li>Identificação de vulnerabilidades</li>
+            <li>Boas práticas de proteção</li>
+          </ul>
+        </article>
+
+        <article class="course-card">
+          <h2>Banco de Dados & Analytics</h2>
+          <p>Aprenda a modelar, consultar e analisar dados usando SQL, NoSQL e ferramentas de relatórios.</p>
+          <ul>
+            <li>Modelagem relacional</li>
+            <li>Consultas SQL avançadas</li>
+            <li>Visualização e análise de dados</li>
+          </ul>
+        </article>
+      </section>
+    </main>
   </body>
 </html>
